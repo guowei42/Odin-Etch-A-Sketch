@@ -1,4 +1,3 @@
-const sketch = document.querySelector('#sketch');
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
@@ -25,5 +24,28 @@ buttons.forEach((button) => {
 });
 
 function createDiv(number) {
+    const sketch = document.querySelector('.sketch');
+    sketch.style['grid-template-columns'] = 'repeat(' + number + ', auto)';
+    sketch.textContent = '';
+    for (let i = 0; i < number * number; i++) {
+        const div = document.createElement('div');
+        div.id = 'etch';
+        div.textContent = "test";
+        sketch.appendChild(div);
+    }
+    setColor('royalblue');
     console.log(number);
+}
+
+function setColor(color) {
+    const colours = document.querySelectorAll('#etch');
+    colours.forEach((colour) => {
+        colour.addEventListener('mouseover', () => {
+            if (colour.style['background-color'] == color) {
+                colour.style['background-color'] = 'white';
+            } else {
+                colour.style['background-color'] = color;
+            }
+        });
+    });
 }
