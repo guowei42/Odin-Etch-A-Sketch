@@ -1,0 +1,38 @@
+* {
+    border: 1px solid red;
+}
+
+body {
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.sketch {
+    display: grid;
+    flex: 1;
+    grid-template-columns: auto auto;
+}
