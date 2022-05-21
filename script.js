@@ -4,9 +4,6 @@ buttons.forEach((button) => {
     button.addEventListener('click', () => {
         let id = button.id;
         switch(id) {
-            case "2":
-                createDiv(2);
-                break;
             case "4":
                 createDiv(4);
                 break;
@@ -19,6 +16,9 @@ buttons.forEach((button) => {
             case "32":
                 createDiv(32);
                 break;
+            case "64":
+                createDiv(64);
+                break;
         }
     });
 });
@@ -30,7 +30,7 @@ function createDiv(number) {
     for (let i = 0; i < number * number; i++) {
         const div = document.createElement('div');
         div.id = 'etch';
-        div.textContent = "test";
+        div.textContent = '';
         sketch.appendChild(div);
     }
     setColor('royalblue');
@@ -41,11 +41,7 @@ function setColor(color) {
     const colours = document.querySelectorAll('#etch');
     colours.forEach((colour) => {
         colour.addEventListener('mouseover', () => {
-            if (colour.style['background-color'] == color) {
-                colour.style['background-color'] = 'white';
-            } else {
-                colour.style['background-color'] = color;
-            }
+            colour.style['background-color'] = color;
         });
     });
 }
