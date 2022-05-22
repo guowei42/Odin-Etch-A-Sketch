@@ -13,19 +13,20 @@
         <div class = "header">
             Etch A Sketch
         </div>
-        <div class="container">
-            <div class="content">
-                <div class="controls">
-                    <button id = "4" type="button">4 x 4</button>
-                    <button id = "8" type="button">8 x 8</button>
-                    <button id = "16" type="button">16 x 16</button>
-                    <button id = "32" type="button">32 x 32</button>
-                    <button id = "32" type="button">64 x 64</button>
-                </div>
-                <div class="wrapper">
-                    <div class = "sketch">
+        <div class="content">
+            <div class="controls">
+                <div class = "slider-container">
+                    <div class = "all-slider">
+                        <div id = "value">16</div>
+                        <input type="range" min = "1" max = "100" value = "16" class = "slider" id = "myrange">
+                    </div>
+                    <div>
+                        <button type="button" id ="change-value">Change</button>
                     </div>
                 </div>
+            </div>
+            <div class="wrapper">
+                <div class = "sketch"></div>
             </div>
         </div>
     </body>

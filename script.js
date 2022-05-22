@@ -1,26 +1,16 @@
-const buttons = document.querySelectorAll('button');
+const slider = document.getElementById("myrange");
+const output = document.getElementById("value");
 
-buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-        let id = button.id;
-        switch(id) {
-            case "4":
-                createDiv(4);
-                break;
-            case "8":
-                createDiv(8);
-                break;
-            case "16":
-                createDiv(16);
-                break;
-            case "32":
-                createDiv(32);
-                break;
-            case "64":
-                createDiv(64);
-                break;
-        }
-    });
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+    output.innerHTML = this.value;
+}
+
+const buttonValue = document.getElementById('change-value');
+
+buttonValue.addEventListener('click', () => {
+    createDiv(slider.value);
 });
 
 function createDiv(number) {

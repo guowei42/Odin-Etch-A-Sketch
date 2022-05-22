@@ -1,3 +1,4 @@
+
 .header {
     text-align: center;
     font-size: large;
@@ -5,24 +6,41 @@
 }
 
 body {
+    background-color: rgb(255, 132, 132);
     height: 100vh;
     margin: 0px;
+}
+
+.slider-container {
+    display: flex;
+}
+
+.all-slider{
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
-.container, .content, .controls, .wrapper {
-    display: flex;
+#change-value {
+    height: 100%;
 }
 
-.container, .content, .wrapper, .sketch {
+.content {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
     flex: 1;
+    justify-content: center;
+    align-items: center;
 }
 
 .controls {
-    flex-direction: column;
-    gap: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
 }
 
 .controls button {
@@ -30,14 +48,27 @@ body {
     width: 80px;
 }
 
-.wrapper {
-    justify-content: center;
-}
-
 .sketch {
     border: 5px solid black;
+    background-color: white;
     display: grid;
-    max-width: 500px;
-    min-width: 500px;
-    height: 500px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    position: relative;
+    width: 50%;
+}
+
+.wrapper:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.sketch div {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
 }
