@@ -10,8 +10,3 @@ Lessons Learnt:
 - Modifying the added HTML elements dynamically
 - Implementing CSS to the HTML element
 - Adding more functions (other than href) to buttons
-
-WIP:
-Beautify the webpage
-Add more colors
-Rainbow
